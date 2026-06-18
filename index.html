@@ -3,16 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaibhav Chincholkar — Software Development Engineer</title>
+  <title>Vaibhav Chincholkar — Software Engineer</title>
   <meta name="description" content="Vaibhav Chincholkar is a Software Development Engineer at AWS in Seattle, building reliable, large-scale distributed systems across streaming (Apache Kafka / Amazon MSK), EC2 capacity reservations, and reliability tooling." />
   <meta name="author" content="Vaibhav Chincholkar" />
 
+  <link rel="canonical" href="https://vaibhavchincholkar.github.io/" />
+
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Vaibhav Chincholkar — Software Development Engineer" />
+  <meta property="og:site_name" content="Vaibhav Chincholkar" />
+  <meta property="og:title" content="Vaibhav Chincholkar — Software Engineer" />
   <meta property="og:description" content="SDE at AWS building reliable, large-scale distributed systems." />
   <meta property="og:url" content="https://vaibhavchincholkar.github.io/" />
+  <meta property="og:image" content="https://vaibhavchincholkar.github.io/assets/profile.jpg" />
+  <meta property="og:image:alt" content="Vaibhav Chincholkar" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vaibhav Chincholkar — Software Engineer" />
+  <meta name="twitter:description" content="SDE at AWS building reliable, large-scale distributed systems." />
+  <meta name="twitter:image" content="https://vaibhavchincholkar.github.io/assets/profile.jpg" />
+
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vaibhav Chincholkar",
+    "url": "https://vaibhavchincholkar.github.io/",
+    "image": "https://vaibhavchincholkar.github.io/assets/profile.jpg",
+    "jobTitle": "Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Amazon Web Services" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University at Buffalo, SUNY" },
+      { "@type": "CollegeOrUniversity", "name": "K. J. Somaiya College of Engineering" }
+    ],
+    "knowsAbout": ["Distributed Systems", "Apache Kafka", "Amazon MSK", "Amazon Web Services", "Cloud Infrastructure", "Reliability Engineering"],
+    "sameAs": [
+      "https://github.com/vaibhavchincholkar",
+      "https://www.linkedin.com/in/vchincholkar/"
+    ]
+  }
+  </script>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f7cff'/><text x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'>VC</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
@@ -35,8 +67,8 @@
       <ul class="nav__menu" id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -64,6 +96,7 @@
 
         <div class="hero__cta">
           <a class="btn btn--primary" href="#projects">View my work</a>
+          <a class="btn btn--ghost" href="assets/Vaibhav-Chincholkar-Resume.pdf" download>↓ Résumé</a>
           <a class="btn btn--ghost" href="#contact">Get in touch</a>
         </div>
 
@@ -113,6 +146,11 @@
             I hold a Master's in Computer Science from the University at Buffalo. Before AWS, I did
             NSF-funded research on rendering augmented-reality graphics inside Trusted Execution Environments.
           </p>
+          <p>
+            Outside of work, you'll usually find me flying ✈️ — I'm an aviation enthusiast, and planning a good
+            VFR cross-country scratches the same itch as building a resilient system: lots of preparation,
+            clear checklists, and a healthy respect for the edge cases.
+          </p>
           </div>
         </div>
       </div>
@@ -137,6 +175,8 @@
                 <li>Led the design and implementation of a <strong>custom billing system for AWS capacity reservations</strong>: a credit-calculation engine with seconds-level granularity across <strong>27 regions and 80 Availability Zones</strong>, plus a scalable distributed feed generator producing ~150K billing files per month with daily reconciliation for data integrity. Coordinated delivery across four teams in three time zones to unblock major enterprise customers.</li>
                 <li>Built a <strong>proactive notification system for underutilized capacity reservations</strong>, processing millions of EC2 pool entries with dynamically scaled AWS Lambda. Provisioned all infrastructure as code with AWS CDK (IAM, S3, Lambda, Step Functions), designed resilient retry handling, and shipped a leadership metrics dashboard. Customers are notified via email, Personal Health Dashboard, and CloudWatch events.<br />
                 <a class="tl-link" href="https://aws.amazon.com/about-aws/whats-new/2023/04/utilization-notifications-ec2-on-demand-capacity-reservations/" target="_blank" rel="noopener noreferrer">↗ See the AWS What's New announcement</a></li>
+                <li>Contributed to the launch of <strong>future-dated EC2 On-Demand Capacity Reservations</strong>, letting customers reserve capacity up to 120 days ahead of need. On a tight timeline, helped pivot the design to deliver the new asynchronous capability through the existing Capacity Reservation APIs, and migrated beta customers onto the launched interface.<br />
+                <a class="tl-link" href="https://aws.amazon.com/blogs/aws/announcing-future-dated-amazon-ec2-on-demand-capacity-reservations/" target="_blank" rel="noopener noreferrer">↗ Read the AWS News Blog announcement</a></li>
                 <li>Designed a <strong>unified, plug-and-play compliance integration</strong> for GDPR and fraud / account-event handling. Instead of bespoke, per-service work, new services onboard simply by registering their describe/cancel APIs and granting the required permissions — cutting onboarding time from months to about a week and standardizing compliance across the team's services.</li>
               </ul>
             </div>
@@ -175,41 +215,8 @@
       </div>
     </section>
 
-    <!-- ===== Skills ===== -->
-    <section class="section" id="skills" aria-labelledby="skills-heading">
-      <div class="section__inner">
-        <h2 class="section__title" id="skills-heading">Skills &amp; Tools</h2>
-        <div class="skills">
-          <div class="skill-group">
-            <h3 class="skill-group__title">Languages</h3>
-            <ul class="chips">
-              <li>Java</li><li>C</li><li>C#</li><li>Python</li><li>JavaScript</li><li>SQL</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group__title">AWS &amp; Cloud</h3>
-            <ul class="chips">
-              <li>EC2</li><li>Lambda</li><li>S3</li><li>DynamoDB</li><li>Step Functions</li><li>CloudFormation</li><li>AWS CDK</li><li>CloudWatch</li><li>IAM</li><li>KMS</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group__title">Distributed Systems</h3>
-            <ul class="chips">
-              <li>Apache Kafka</li><li>Amazon MSK</li><li>Event streaming</li><li>High availability</li><li>Durability &amp; auditing</li><li>Fault tolerance</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group__title">Practices</h3>
-            <ul class="chips">
-              <li>Distributed system design</li><li>Infrastructure as Code</li><li>Operational excellence</li><li>On-call / reliability</li><li>Mentorship</li><li>Technical writing</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== Projects ===== -->
-    <section class="section section--alt" id="projects" aria-labelledby="projects-heading">
+    <section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="section__inner">
         <h2 class="section__title" id="projects-heading">Projects</h2>
         <p class="section__lead">A selection of open-source and academic work from my <a href="https://github.com/vaibhavchincholkar" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
@@ -266,6 +273,39 @@
       </div>
     </section>
 
+    <!-- ===== Skills ===== -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-heading">
+      <div class="section__inner">
+        <h2 class="section__title" id="skills-heading">Skills &amp; Tools</h2>
+        <div class="skills">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Languages</h3>
+            <ul class="chips">
+              <li>Java</li><li>C</li><li>C#</li><li>Python</li><li>JavaScript</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">AWS &amp; Cloud</h3>
+            <ul class="chips">
+              <li>EC2</li><li>Lambda</li><li>S3</li><li>DynamoDB</li><li>Step Functions</li><li>CloudFormation</li><li>AWS CDK</li><li>CloudWatch</li><li>IAM</li><li>KMS</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Distributed Systems</h3>
+            <ul class="chips">
+              <li>Apache Kafka</li><li>Amazon MSK</li><li>Event streaming</li><li>High availability</li><li>Durability &amp; auditing</li><li>Fault tolerance</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Practices</h3>
+            <ul class="chips">
+              <li>Distributed system design</li><li>Infrastructure as Code</li><li>Operational excellence</li><li>On-call / reliability</li><li>Mentorship</li><li>Technical writing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Education ===== -->
     <section class="section" id="education" aria-labelledby="edu-heading">
       <div class="section__inner">
@@ -285,8 +325,29 @@
       </div>
     </section>
 
+    <!-- ===== Publications ===== -->
+    <section class="section section--alt" id="publications" aria-labelledby="pub-heading">
+      <div class="section__inner">
+        <h2 class="section__title" id="pub-heading">Publications</h2>
+        <article class="pub">
+          <h3 class="pub__title">
+            <a href="https://doi.org/10.1145/3458864.3467887" target="_blank" rel="noopener noreferrer">Rushmore: Securely Displaying Static and Animated Images Using TrustZone</a>
+          </h3>
+          <p class="pub__venue">ACM MobiSys 2021 · 19th International Conference on Mobile Systems, Applications, and Services</p>
+          <p class="pub__desc">A system that securely decrypts and displays encrypted static and animated images on mobile devices using ARM TrustZone. Work done as a Research Assistant at the University at Buffalo.</p>
+        </article>
+        <article class="pub">
+          <h3 class="pub__title">
+            <a href="assets/MotorDroid-IJARCCE-2017.pdf" target="_blank" rel="noopener noreferrer">Controlling of a Toy Car using an Android Device (MotorDroid)</a>
+          </h3>
+          <p class="pub__venue">IJARCCE · Vol. 6, Issue 3, pp. 926–929 · March 2017</p>
+          <p class="pub__desc">A cost-effective system to remotely drive a toy car over the internet from an Android device with a live video feed — combining Arduino, GPS, and ultrasonic sensing for control and collision avoidance. Undergraduate research at K. J. Somaiya College of Engineering.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- ===== Contact ===== -->
-    <section class="section section--alt" id="contact" aria-labelledby="contact-heading">
+    <section class="section" id="contact" aria-labelledby="contact-heading">
       <div class="section__inner section__inner--center">
         <h2 class="section__title section__title--center" id="contact-heading">Get in touch</h2>
         <p class="contact__lead">
